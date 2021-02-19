@@ -16,7 +16,7 @@
     - Web frameworks such as Django and Rails.
 
 - **Draw a scheme** where you **understand** that the **MVC pattern** is clearly
-  ![Alt text](assets/imgth/mvc_scheme.png?raw=true "MVC scheme")
+  ![Alt text](assets/img/mvc_scheme.png?raw=true "MVC scheme")
 
 - Explain in **which cases you would use this pattern**
   MVC serves well when you have an application that needs separation of the data(model), the data crunching(controller), and the presentation of the data(view). This also serves well in an application where the data source and/or data presentation can change at any time
