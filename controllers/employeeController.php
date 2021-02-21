@@ -1,6 +1,6 @@
 <?php
 
-require_once MODELS . "employeeModel.php";
+require_once "models/employeeModel.php";
 
 //OBTAIN THE ACCION PASSED IN THE URL AND EXECUTE IT AS A FUNCTION
 
@@ -15,7 +15,9 @@ require_once MODELS . "employeeModel.php";
  */
 function getAllEmployees()
 {
-    //
+    $result = get();
+    include 'views/main/main.php';
+    include 'views/employee/employeeDashboard.php';
 }
 
 /**

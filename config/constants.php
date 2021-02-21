@@ -1,13 +1,13 @@
 <?php
 
 //CONTROLLERS
-define("CONTROLLERS", BASE_PATH . '/controllers/');
+//define("CONTROLLERS", '/controllers/');
 
 //VIEWS
-define("VIEWS", BASE_PATH . '/views/');
+define("VIEWS", 'views/');
 
 //MODELS
-define("MODELS", BASE_PATH . '/models/');
+//define("MODELS", '/models/');
 
 //RESOURCES
-define("RESOURCES", BASE_PATH . '/resources/');
+//define("RESOURCES", '/resources/');
