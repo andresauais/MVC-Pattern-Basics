@@ -4,6 +4,7 @@
     <tr>
       <th scope="col"># Travel</th>
       <th scope="col"># Employee</th>
+      <th scope="col">City</th>
       <th scope="col">Date From</th>
       <th scope="col">Date End</th>
     </tr>
