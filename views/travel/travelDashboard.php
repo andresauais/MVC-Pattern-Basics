@@ -1,4 +1,5 @@
 <h1>Employees Travel Information</h1>
+<a href="index.php">BACK</a>
 <table class="table table-bordered">
   <thead class="thead-dark">
     <tr>

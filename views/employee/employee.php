@@ -1,12 +1,10 @@
-<?php 
-        while($row = mysqli_fetch_assoc($result)){
-    ?>
-  <tr>
-      <th scope="row"><?php echo $row['emp_id']; ?></th>
-      <td><?php echo $row['firstName']; ?></td>
-      <td><?php echo $row['lastName']; ?></td>
-      <td><?php echo $row['address']; ?></td>
-      <td><?php echo $row['city']; ?></td>
-      <td><a href="index.php?emp_id=<?php echo $row['emp_id'];?>"><?php echo $row['number']; ?></a></td>
-  </tr>
+<?php while($row = mysqli_fetch_assoc($result)){?>
+<a href="index.php">BACK</a>
+<h1>Employee #<?php echo $row['emp_id']?> information</h1>
+<ul>
+    <li><h2>First Name: <?php echo $row['firstName']?></h2></li>
+    <li><h2>Last Name: <?php echo $row['lastName']?></h2></li>
+    <li><h2>Address: <?php echo $row['address']?></h2></li>
+    <li><h2>City: <?php echo $row['city']?></h2></li>
+</ul>
 <?php }?>

@@ -3,7 +3,7 @@
     ?>
   <tr>
       <th scope="row"><?php echo $row['travel_id']; ?></th>
-      <td><?php echo $row['emp_id']; ?></td>
+      <td><a href="index.php?emp_id=<?php echo $row['emp_id'];?>"><?php echo $row['emp_id'];?></a></td>
       <td><?php echo $row['city']; ?></td>
       <td><?php echo $row['from_date']; ?></td>
       <td><?php echo $row['to_date']; ?></td>

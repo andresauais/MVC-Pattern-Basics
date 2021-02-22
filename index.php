@@ -8,13 +8,10 @@ include_once "config/constants.php";
 
 // TODO Implement the logic to include the controller passed by the URL dynamically
 // In the event that the controller passed by URL does not exist, you must show the error view.
-if(!isset($_REQUEST['c'])){
-  if(!isset($_GET['emp_id'])){
-    include 'controllers/employeeController.php';
-    getAllEmployees();
-  }
-  else if(isset($_GET['emp_id'])){
-    include 'controllers/travelController.php';
-    getAllTravels();
-  }
+
+if(isset($_GET['travel']) && file_exists('controllers/travelController.php')){
+  include 'controllers/travelController.php';
+}
+else{
+  include 'controllers/employeeController.php';
 }

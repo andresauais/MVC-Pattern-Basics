@@ -1,5 +1,8 @@
 <?php
 require_once "models/travelModel.php";
+
+getAllTravels();
+
 function getAllTravels()
 {
     $result = get();

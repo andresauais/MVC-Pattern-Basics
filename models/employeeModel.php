@@ -9,8 +9,9 @@ function get(){
 }
 
 function getById($id){
-}
-
-function loadInfo(){
-  
+  include 'config/database.php';
+  $sql = "SELECT  * FROM employees WHERE emp_id =$id;";
+  $result = mysqli_query($conn, $sql);
+  $resultCheck = mysqli_num_rows($result);
+  return $result;
 }

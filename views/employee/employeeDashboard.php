@@ -5,12 +5,17 @@
       <th scope="col">#</th>
       <th scope="col">First</th>
       <th scope="col">Last</th>
-      <th scope="col">Address</th>
-      <th scope="col">City</th>
       <th scope="col"># Travels</th>
     </tr>
   </thead>
   <tbody>
-  <?php include 'views/employee/employee.php'; ?>
+  <?php while($row = mysqli_fetch_assoc($result)){?>
+    <tr>
+        <th scope="row"><a href="index.php?emp_id=<?php echo $row['emp_id'];?>"><?php echo $row['emp_id'];?></a></th>
+        <td><?php echo $row['firstName']; ?></td>
+        <td><?php echo $row['lastName']; ?></td>
+        <td><a href="index.php?travel=<?php echo $row['emp_id'];?>"><?php echo $row['number'];?></a></td>
+    </tr>
+  <?php }?>
   </tbody>
 </table>
