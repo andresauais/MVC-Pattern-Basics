@@ -30,6 +30,9 @@ function getAllEmployees()
 {
     $result = get();
     include 'views/main/main.php';
+    if(isset($_GET['delete']) && $_GET['delete']== "success"){
+        success();
+    }
     include 'views/employee/employeeDashboard.php';
 }
 
@@ -41,6 +44,26 @@ function getEmployee($request)
     $result = getById($request["emp_id"]);
     include 'views/main/main.php';
     include 'views/employee/employee.php';
+}
+
+function delete($request){
+    $result = deleteEmployee($request['emp_id']);
+    if($result != 1){
+        error($result);
+    }else{
+        header("Location: index.php?controller=employeeController.php&action=getAllEmployees&delete=success");
+    }
+}
+function update($request){
+    include 'views/main/main.php';
+    include 'views/employee/employeeUpdate.php';
+}
+
+function success(){
+    echo    '<div class="alert alert-success alert-dismissible fade show">
+                <strong>Delete!</strong> Employee deleted.
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+            </div>';
 }
 
 /**

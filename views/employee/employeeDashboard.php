@@ -6,6 +6,7 @@
       <th scope="col">First</th>
       <th scope="col">Last</th>
       <th scope="col"># Travels</th>
+      <th scope="col">EDIT</th>
     </tr>
   </thead>
   <tbody>
@@ -15,6 +16,10 @@
         <td><?php echo $row['firstName']; ?></td>
         <td><?php echo $row['lastName']; ?></td>
         <td><a href="index.php?controller=travelController.php&action=get&emp_id=<?php echo $row['emp_id'];?>"><?php echo $row['number'];?></a></td>
+        <td>
+          <a href="index.php?controller=employeeController.php&action=update&emp_id=<?php echo $row['emp_id'];?>" class="btn btn-primary">Edit</a>
+          <a href="index.php?controller=employeeController.php&action=delete&emp_id=<?php echo $row['emp_id'];?>" class="btn btn-danger">Delete</a>
+        </td>
     </tr>
   <?php }?>
   </tbody>
