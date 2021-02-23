@@ -6,14 +6,19 @@ require_once "models/employeeModel.php";
 
 //Keep in mind that the function to be executed has to be one of the ones declared in this controller
 // TODO Implement the logic
-if(!isset($_GET['emp_id']) && file_exists('controllers/employeeController.php')){
-    getAllEmployees();
-}
-else if(isset($_GET['emp_id']) && file_exists('controllers/employeeController.php')){
-    getEmployee($_GET['emp_id']);
+$action = "";
+
+if(isset($_REQUEST['action'])){
+    $action = $_REQUEST['action'];
 }
 else{
-    include 'controllers/employeeController.php';
+    $action = "getAllEmployees";
+}
+
+if (function_exists($action)) {
+    call_user_func($action, $_REQUEST);
+}
+else{
     error('Not found');
 }
 
@@ -33,7 +38,7 @@ function getAllEmployees()
  */
 function getEmployee($request)
 {
-    $result = getById($request);
+    $result = getById($request["emp_id"]);
     include 'views/main/main.php';
     include 'views/employee/employee.php';
 }

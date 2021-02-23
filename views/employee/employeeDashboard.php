@@ -11,10 +11,10 @@
   <tbody>
   <?php while($row = mysqli_fetch_assoc($result)){?>
     <tr>
-        <th scope="row"><a href="index.php?emp_id=<?php echo $row['emp_id'];?>"><?php echo $row['emp_id'];?></a></th>
+        <th scope="row"><a href="index.php?controller=employeeController.php&action=getEmployee&emp_id=<?php echo $row['emp_id'];?>"><?php echo $row['emp_id'];?></a></th>
         <td><?php echo $row['firstName']; ?></td>
         <td><?php echo $row['lastName']; ?></td>
-        <td><a href="index.php?travel=<?php echo $row['emp_id'];?>"><?php echo $row['number'];?></a></td>
+        <td><a href="index.php?controller=travelController.php&action=get&emp_id=<?php echo $row['emp_id'];?>"><?php echo $row['number'];?></a></td>
     </tr>
   <?php }?>
   </tbody>
